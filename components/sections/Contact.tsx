@@ -6,6 +6,7 @@ import {
   INSTAGRAM_HANDLE,
   TIKTOK_LINK,
   TIKTOK_HANDLE,
+  FACEBOOK_LINK,
 } from '@/lib/data';
 import type { Dictionary, Locale } from '@/lib/i18n';
 import type { TourPackage } from '@/lib/types';
@@ -18,6 +19,7 @@ import {
   PinIcon,
   MailIcon,
   TikTokIcon,
+  FacebookIcon,
 } from '@/components/icons';
 
 interface ContactProps {
@@ -50,6 +52,13 @@ export default function Contact({ dict, locale, packages }: ContactProps) {
       tint: 'bg-ink-950/10 text-ink-950',
     },
     {
+      icon: FacebookIcon,
+      label: dict.contact.facebook,
+      value: 'Manta Bali Nusa Tour',
+      href: FACEBOOK_LINK,
+      tint: 'bg-blue-600/10 text-blue-600',
+    },
+    {
       icon: MailIcon,
       label: dict.contact.email,
       value: CONTACT_EMAIL,
@@ -62,7 +71,6 @@ export default function Contact({ dict, locale, packages }: ContactProps) {
       value: dict.contact.addressValue,
       href: 'https://maps.app.goo.gl/71yZyPT3xFCetUkn7',
       tint: 'bg-sky-500/10 text-sky-600',
-      colSpan: 'sm:col-span-2',
     },
   ];
 
@@ -103,7 +111,7 @@ export default function Contact({ dict, locale, packages }: ContactProps) {
                   href={c.href}
                   target={external ? '_blank' : undefined}
                   rel={external ? 'noopener noreferrer' : undefined}
-                  className={`group flex items-center gap-4 rounded-2xl border border-ink-100 bg-white p-4 transition-all hover:-translate-y-0.5 hover:shadow-soft ${c.colSpan || ''}`}
+                  className="group flex items-center gap-4 rounded-2xl border border-ink-100 bg-white p-4 transition-all hover:-translate-y-0.5 hover:shadow-soft"
                 >
                   <span
                     className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${c.tint}`}

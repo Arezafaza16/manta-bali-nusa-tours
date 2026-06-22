@@ -5,12 +5,14 @@ import {
   CONTACT_EMAIL,
   INSTAGRAM_LINK,
   TIKTOK_LINK,
+  FACEBOOK_LINK,
 } from '@/lib/data';
 import type { Dictionary } from '@/lib/i18n';
 import {
   WhatsAppIcon,
   InstagramIcon,
   TikTokIcon,
+  FacebookIcon,
   MailIcon,
   PinIcon,
 } from '@/components/icons';
@@ -71,6 +73,15 @@ export default function Footer({ dict }: { dict: Dictionary }) {
                 className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-ink-200 transition-colors hover:bg-brand-500 hover:text-white"
               >
                 <TikTokIcon className="h-5 w-5" />
+              </a>
+              <a
+                href={FACEBOOK_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-ink-200 transition-colors hover:bg-brand-500 hover:text-white"
+              >
+                <FacebookIcon className="h-5 w-5" />
               </a>
               <a
                 href={`mailto:${CONTACT_EMAIL}`}

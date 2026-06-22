@@ -7,6 +7,7 @@ export const INSTAGRAM_HANDLE = 'mantabalinusatour';
 export const INSTAGRAM_LINK = 'https://www.instagram.com/mantabalinusatour/';
 export const TIKTOK_HANDLE = 'cv.mantabalinusatour';
 export const TIKTOK_LINK = 'https://www.tiktok.com/@cv.mantabalinusatour';
+export const FACEBOOK_LINK = 'https://www.facebook.com/share/1JTWxNcW1A/?mibextid=wwXIfr';
 
 export function waLink(message?: string): string {
   if (!message) return WHATSAPP_LINK;
