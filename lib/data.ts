@@ -3,8 +3,8 @@ import type { TourPackage, Testimonial, Destination } from './types';
 export const WHATSAPP_NUMBER = '6282147863974';
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 export const CONTACT_EMAIL = 'mantabalinusa@gmail.com';
-export const INSTAGRAM_HANDLE = 'mantabalinusa';
-export const INSTAGRAM_LINK = 'https://instagram.com/mantabalinusa';
+export const INSTAGRAM_HANDLE = 'mantabalinusatour';
+export const INSTAGRAM_LINK = 'https://www.instagram.com/mantabalinusatour?igsh=MWVzZGI4NDV4cTlsaA%3D%3D&utm_source=qr';
 
 export function waLink(message?: string): string {
   if (!message) return WHATSAPP_LINK;
