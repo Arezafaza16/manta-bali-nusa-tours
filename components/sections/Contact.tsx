@@ -4,6 +4,8 @@ import {
   CONTACT_EMAIL,
   INSTAGRAM_LINK,
   INSTAGRAM_HANDLE,
+  TIKTOK_LINK,
+  TIKTOK_HANDLE,
 } from '@/lib/data';
 import type { Dictionary, Locale } from '@/lib/i18n';
 import type { TourPackage } from '@/lib/types';
@@ -15,6 +17,7 @@ import {
   InstagramIcon,
   PinIcon,
   MailIcon,
+  TikTokIcon,
 } from '@/components/icons';
 
 interface ContactProps {
@@ -40,11 +43,11 @@ export default function Contact({ dict, locale, packages }: ContactProps) {
       tint: 'bg-brand-50 text-brand-600',
     },
     {
-      icon: PinIcon,
-      label: dict.contact.address,
-      value: dict.contact.addressValue,
-      href: 'https://maps.app.goo.gl/71yZyPT3xFCetUkn7',
-      tint: 'bg-sky-500/10 text-sky-600',
+      icon: TikTokIcon,
+      label: dict.contact.tiktok,
+      value: `@${TIKTOK_HANDLE}`,
+      href: TIKTOK_LINK,
+      tint: 'bg-ink-950/10 text-ink-950',
     },
     {
       icon: MailIcon,
@@ -52,6 +55,14 @@ export default function Contact({ dict, locale, packages }: ContactProps) {
       value: CONTACT_EMAIL,
       href: `mailto:${CONTACT_EMAIL}`,
       tint: 'bg-ink-900/5 text-ink-700',
+    },
+    {
+      icon: PinIcon,
+      label: dict.contact.address,
+      value: dict.contact.addressValue,
+      href: 'https://maps.app.goo.gl/71yZyPT3xFCetUkn7',
+      tint: 'bg-sky-500/10 text-sky-600',
+      colSpan: 'sm:col-span-2',
     },
   ];
 
@@ -92,7 +103,7 @@ export default function Contact({ dict, locale, packages }: ContactProps) {
                   href={c.href}
                   target={external ? '_blank' : undefined}
                   rel={external ? 'noopener noreferrer' : undefined}
-                  className="group flex items-center gap-4 rounded-2xl border border-ink-100 bg-white p-4 transition-all hover:-translate-y-0.5 hover:shadow-soft"
+                  className={`group flex items-center gap-4 rounded-2xl border border-ink-100 bg-white p-4 transition-all hover:-translate-y-0.5 hover:shadow-soft ${c.colSpan || ''}`}
                 >
                   <span
                     className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${c.tint}`}

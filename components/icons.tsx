@@ -257,3 +257,11 @@ export function SparkleIcon(props: IconProps) {
     </svg>
   );
 }
+
+export function TikTokIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.77 0 2.89 2.89 0 0 1 2.89-2.89c.33 0 .65.05.95.15V7.47a6.28 6.28 0 0 0-4.7 6.06c0 3.53 2.86 6.39 6.39 6.39s6.39-2.86 6.39-6.39V6.69z" />
+    </svg>
+  );
+}
